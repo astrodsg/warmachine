@@ -1,24 +1,21 @@
 # warmachine
 #
+import os
 
 # choose the nickname for you bot.
 NICKNAME = 'warmachine'
-
-# (optional) Only for servers that have nickserv.
-NICKSERV_PASSWORD =''
-
-SERVER = 'irc.freenode.org'
+SERVER = 'ender.irc.slack.com'
 PORT = "+6667"
 IDENT = 'warmachine'
+PASSWORD = os.environ['PASSWORD']
 
-CHANNELS = ('#warmachine-dev',)
+CHANNELS = ('#lobby',)
 
-ADMINS = ('com4',)
+ADMINS = ('jason',)
 
-DB_PATH = "warmachine.db"
+DB_PATH = "enderlabs.db"
 
 ACTIONS = (
-    'wmd.actions.passive.nickserv.IdentWithNickserv',
     'wmd.actions.passive.pong.RespondToPing',
     'wmd.actions.passive.topic_archive.TopicArchive',
     'wmd.actions.passive.rejoin_on_kick.RejoinOnKick',
@@ -27,6 +24,7 @@ ACTIONS = (
     'wmd.actions.modules.ListModules',
     'wmd.actions.modules.UnloadModule',
     'wmd.actions.google.GoogleSearch',
+    'wmd.actions.giphy.GiphySearch',
 )
 
 try:
