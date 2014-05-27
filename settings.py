@@ -9,7 +9,7 @@ PORT = "+6667"
 IDENT = 'warmachine'
 PASSWORD = os.environ['PASSWORD']
 
-CHANNELS = ('#lobby',)
+CHANNELS = ('#lobby',"#developers")
 
 ADMINS = ('jason',)
 
